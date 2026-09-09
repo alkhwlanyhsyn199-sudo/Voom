@@ -16,10 +16,13 @@ jobs:
       - name: إعداد Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: تثبيت الحزم
         run: npm ci
+
+      - name: تثبيت Capacitor CLI
+        run: npm install --no-save @capacitor/cli
 
       - name: مزامنة Capacitor
         run: npx cap sync android
