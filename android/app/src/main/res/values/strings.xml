@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Voom</string>
+    <string name="title_activity_main">Voom</string>
+    <string name="package_name">com.voom.app</string>
+    <string name="custom_url_scheme">com.voom.app</string>
+</resources>

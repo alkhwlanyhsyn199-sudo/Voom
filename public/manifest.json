@@ -1,0 +1,10 @@
+{
+  "name": "Voom",
+  "short_name": "Voom",
+  "description": "منصة فيديو Voom",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#ff1744",
+  "orientation": "portrait"
+}
