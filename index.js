@@ -75,7 +75,7 @@ main{padding-bottom:85px}
 <div class="section">Shorts</div>
 
 <div class="shorts">
-<div class="short">🎮</div>
+<div class="short" onclick="alert("فتح Shorts 🎬")">🎮</div>
 <div class="short">🔥</div>
 <div class="short">😂</div>
 </div>
