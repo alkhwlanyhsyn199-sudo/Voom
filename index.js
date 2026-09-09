@@ -63,7 +63,7 @@ main{padding-bottom:85px}
 <div class="card" onclick="openVideo()">
 <div class="thumb">🎬</div>
 <div class="title">أول فيديو في منصة Voom</div>
-<div class="channel">Voom Gaming</div><button>👍 إعجاب</button> <button>🔖 حفظ</button>
+<div class="channel">Voom Gaming</div><br><input placeholder="اكتب تعليقك..." style="padding:10px;border:1px solid #ddd;border-radius:8px"><button>💬 تعليق</button><button>👍 إعجاب</button> <button>🔖 حفظ</button>
 </div>
 
 <div class="card" onclick="openVideo()">
