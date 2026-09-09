@@ -11,17 +11,17 @@ app.get('/', (req, res) => {
 <title>Voom</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#0f0f0f;color:white;font-family:Arial,sans-serif}
+body{margin:0;background:#ffffff;color:#222222;font-family:Arial,sans-serif}
 header{
-height:60px;background:#111;display:flex;align-items:center;
+height:56px;background:#ffffff;display:flex;align-items:center;
 justify-content:space-between;padding:0 16px;position:sticky;top:0
 }
-.logo{font-size:27px;font-weight:bold;color:#ff1744}
-.search{font-size:25px}
-.grid{padding:12px}
-.card{margin-bottom:20px}
+.logo{font-size:24px;font-weight:700;color:#c9a227;letter-spacing:1px}
+.search{font-size:21px;color:#777;padding:5px 9px;border-radius:50%;background:#f5f5f5}
+.grid{padding:0}
+.card{margin-bottom:18px;background:#fff;border-radius:0;overflow:hidden;box-shadow:none}
 .thumb{
-height:200px;background:#292929;border-radius:12px;
+height:200px;background:#f8f8f8;border-radius:12px;
 display:flex;align-items:center;justify-content:center;
 font-size:55px
 }
@@ -29,18 +29,18 @@ font-size:55px
 .channel{color:#aaa;margin-top:6px}
 .section{font-size:22px;font-weight:bold;margin:25px 5px 12px}
 .shorts{display:flex;gap:10px;overflow:hidden}
-.short{
-min-width:160px;height:250px;background:#292929;border-radius:12px;
+.short{width:120px;height:180px;flex:0 0 auto;border-radius:14px;overflow:hidden;background:#f5f2ea;border:1px solid #e5d8ad;
+min-width:160px;height:250px;background:#f8f8f8;border-radius:12px;
 display:flex;align-items:center;justify-content:center;font-size:40px
 }
 .bottom{
 position:fixed;bottom:0;left:0;right:0;height:70px;
-background:#181818;border-top:1px solid #333;
+background:#ffffff;border-top:1px solid #d8c27a;
 display:flex;justify-content:space-around;align-items:center
 }
-.nav{text-align:center;font-size:12px;color:#ddd}
-.nav b{display:block;font-size:25px;margin-bottom:3px}
-.plus{
+.nav{font-size:12px;text-align:center;font-size:12px;color:#777}
+.nav b{display:block;font-size:20px;color:#c9a227;margin-bottom:3px}
+.plus{width:42px;height:42px;border-radius:50%;font-size:24px;background:#c9a227;color:#fff;display:flex;align-items:center;justify-content:center;
 background:white;color:black;border-radius:50%;
 width:48px;height:48px;display:flex;align-items:center;
 justify-content:center;font-size:30px
@@ -52,21 +52,21 @@ main{padding-bottom:85px}
 <body>
 
 <header>
-<div class="logo">▶ Voom</div>
-<div class="search">⌕</div>
+<div class="logo">Voom</div>
+<div class="search" onclick="searchVoom()">⌕</div>
 </header>
 
 <main>
 
 <div class="grid">
 
-<div class="card">
+<div class="card" onclick="openVideo()">
 <div class="thumb">🎬</div>
 <div class="title">أول فيديو في منصة Voom</div>
 <div class="channel">Voom Gaming</div>
 </div>
 
-<div class="card">
+<div class="card" onclick="openVideo()">
 <div class="thumb">🎮</div>
 <div class="title">أفضل ألعاب 2026</div>
 <div class="channel">Voom Gaming</div>
@@ -100,7 +100,7 @@ main{padding-bottom:85px}
 <div class="nav"><b>●</b>أنت</div>
 </div>
 
-</body>
+<script>function openVideo(){const m=document.querySelector("main");m.innerHTML="";const box=document.createElement("div");box.style.padding="12px";const v=document.createElement("div");v.className="thumb";v.style.height="220px";v.style.display="flex";v.style.alignItems="center";v.style.justifyContent="center";v.style.fontSize="60px";v.textContent="🎬";const h=document.createElement("h2");h.textContent="أول فيديو في منصة Voom";const p=document.createElement("p");p.style.color="#777";p.textContent="Voom Gaming";const b=document.createElement("button");b.textContent="← رجوع";b.onclick=()=>location.reload();box.append(v,h,p,b);m.appendChild(box)}</script><script>function searchVoom(){const q=prompt("ابحث في Voom");if(!q)return;document.querySelectorAll(".card").forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(q.toLowerCase())?"block":"none"})}</script><script>function searchVoom(){const q=prompt("ابحث في Voom");if(!q)return;document.querySelectorAll(".card").forEach(c=>c.style.display=c.innerText.toLowerCase().includes(q.toLowerCase())?"block":"none")}</script></body>
 </html>
   `);
 });
