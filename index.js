@@ -16,7 +16,7 @@ header{
 height:56px;background:#ffffff;display:flex;align-items:center;
 justify-content:space-between;padding:0 16px;position:sticky;top:0
 }
-.logo{font-size:24px;font-weight:700;color:#c9a227;letter-spacing:1px}
+.logo{font-size:24px;font-weight:700;color:#ef6f6f;letter-spacing:1px}
 .search{font-size:21px;color:#777;padding:5px 9px;border-radius:50%;background:#f5f5f5}
 .grid{padding:0}
 .card{margin-bottom:18px;background:#fff;border-radius:0;overflow:hidden;box-shadow:none}
@@ -39,7 +39,7 @@ background:#ffffff;border-top:1px solid #d8c27a;
 display:flex;justify-content:space-around;align-items:center
 }
 .nav{font-size:12px;text-align:center;font-size:12px;color:#777}
-.nav b{display:block;font-size:20px;color:#c9a227;margin-bottom:3px}
+.nav b{display:block;font-size:20px;color:#ef6f6f;margin-bottom:3px}
 .plus{width:42px;height:42px;border-radius:50%;font-size:24px;background:#c9a227;color:#fff;display:flex;align-items:center;justify-content:center;
 background:white;color:black;border-radius:50%;
 width:48px;height:48px;display:flex;align-items:center;
