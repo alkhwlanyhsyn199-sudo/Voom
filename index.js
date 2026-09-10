@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Voom</title>
-<style>
+<style>#searchBtn{position:absolute;left:20px;top:12px}</style><style>
 *{box-sizing:border-box}
 body{margin:0;background:#ffffff;color:#222222;font-family:Arial,sans-serif}
 header{
@@ -53,7 +53,7 @@ main{padding-bottom:85px}
 
 <header>
 <div class="logo">Voom</div>
-<div class="search" onclick="searchVoom()">⌕</div><div class="search" onclick="alert('🔔 لا توجد إشعارات جديدة')">🔔</div><div class="search" onclick="alert('لا توجد إشعارات جديدة 🔔')">🔔</div>
+<div id="searchBtn" class="search" onclick="searchVoom()">⌕</div><div class="search" onclick="alert('لا توجد إشعارات جديدة 🔔')">🔔</div>
 </header>
 
 <main>
@@ -99,7 +99,7 @@ main{padding-bottom:85px}
 <div class="nav"><b>▶</b>الاشتراكات</div>
 <div class="nav" onclick="loginVoom()"><b>●</b>أنت</div>
 </div>
-<script>function uploadVoom(){const i=document.createElement("input");i.type="file";i.accept="video/*";i.onchange=()=>{if(!i.files[0])return;const t=document.createElement("input");t.type="file";t.accept="image/*";t.onchange=()=>{alert("تم اختيار الفيديو والصورة المصغرة ✅")};t.click()};i.click()}</script>
+<script>function uploadVoom(){const i=document.createElement("input");i.type="file";i.accept="video/*";i.onchange=function(){const video=i.files[0];if(!video)return;const t=document.createElement("input");t.type="file";t.accept="image/*";t.onchange=function(){const img=t.files[0];if(!img)return;const m=document.querySelector("main");m.innerHTML="";const box=document.createElement("div");box.style.padding="20px";const h=document.createElement("h2");h.textContent="نشر فيديو جديد";const preview=document.createElement("img");preview.src=URL.createObjectURL(img);preview.style.width="100%";preview.style.aspectRatio="16/9";preview.style.objectFit="cover";preview.style.borderRadius="12px";const name=document.createElement("p");name.textContent="🎬 "+video.name;const title=document.createElement("input");title.placeholder="عنوان الفيديو";title.style.width="100%";title.style.padding="12px";title.style.boxSizing="border-box";const desc=document.createElement("textarea");desc.placeholder="وصف الفيديو";desc.style.width="100%";desc.style.height="100px";desc.style.boxSizing="border-box";const publish=document.createElement("button");publish.textContent="🚀 نشر الفيديو";publish.onclick=function(){alert("تم تجهيز الفيديو للنشر ✅")};const back=document.createElement("button");back.textContent="← رجوع";back.onclick=function(){location.reload()};box.append(h,preview,name,title,document.createElement("br"),desc,document.createElement("br"),publish,back);m.appendChild(box)};t.click()};i.click()}</script>
 
 <script>function openVideo(){const m=document.querySelector("main");m.innerHTML="";const box=document.createElement("div");box.style.padding="12px";const v=document.createElement("div");v.className="thumb";v.style.height="auto";v.style.aspectRatio="16/9";v.style.display="flex";v.style.alignItems="center";v.style.justifyContent="center";v.style.fontSize="60px";v.textContent="🎬";const h=document.createElement("h2");h.textContent="أول فيديو في منصة Voom";const p=document.createElement("p");p.style.color="#777";p.textContent="Voom Gaming";const b=document.createElement("button");b.textContent="← رجوع";b.onclick=()=>location.reload();box.append(v,h,p,b);m.appendChild(box)}</script><script>function searchVoom(){const q=prompt("ابحث في Voom");if(!q)return;document.querySelectorAll(".card").forEach(c=>c.style.display=c.innerText.toLowerCase().includes(q.toLowerCase())?"block":"none")}</script><script>function loginVoom(){const m=document.querySelector("main");m.innerHTML="<div style=padding:20px;text-align:center><div style=font-size:64px>👤</div><h2>حسابي في Voom</h2><p style=color:#777>مرحبًا بك في حسابك</p><div style=display:flex;justify-content:center;gap:25px;margin:20px><div><b>85</b><br>متابع</div><div><b>12</b><br>فيديو</div><div><b>24</b><br>محفوظ</div></div><button onclick=creatorDashboard()>📊 لوحة التحكم</button><button onclick=settingsVoom()>⚙️ الإعدادات</button><br><br><button onclick=location.reload()>← رجوع</button></div>"}</script></body>
 </html>
