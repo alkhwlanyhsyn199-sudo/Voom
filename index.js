@@ -63,7 +63,7 @@ main{padding-bottom:85px}
 <div class="card" onclick="openVideo()">
 <div class="thumb">🎬</div>
 <div class="title">أول فيديو في منصة Voom</div>
-<div class="channel">Voom Gaming</div><br><input placeholder="اكتب تعليقك..." style="padding:10px;border:1px solid #ddd;border-radius:8px"><button>💬 تعليق</button><button onclick="this.textContent=this.textContent.includes('👍')?'💛 تم الإعجاب':'👍 إعجاب'">👍 إعجاب</button> <button onclick="this.textContent=this.textContent.includes('🔖')?'✅ تم الحفظ':'🔖 حفظ'">🔖 حفظ</button><button onclick="creatorDashboard()">📊 لوحة التحكم</button>
+<div class="channel">Voom Gaming</div><br><input placeholder="اكتب تعليقك..." style="padding:10px;border:1px solid #ddd;border-radius:8px"><button onclick="const i=this.previousElementSibling;if(i.value.trim()){const p=document.createElement('p');p.textContent='💬 '+i.value;p.style.padding='8px 12px';p.style.background='#f5f5f5';p.style.borderRadius='8px';this.parentElement.appendChild(p);i.value=''}">💬 تعليق</button><button onclick="this.textContent=this.textContent.includes('👍')?'💛 تم الإعجاب':'👍 إعجاب'">👍 إعجاب</button> <button onclick="this.textContent=this.textContent.includes('🔖')?'✅ تم الحفظ':'🔖 حفظ'">🔖 حفظ</button><button onclick="creatorDashboard()">📊 لوحة التحكم</button>
 </div>
 
 <div class="card" onclick="openVideo()">
