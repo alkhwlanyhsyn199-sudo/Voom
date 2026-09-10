@@ -57,7 +57,7 @@ main{padding-bottom:85px}
 </header>
 
 <main>
-<script>document.addEventListener("DOMContentLoaded",function(){const z=localStorage.getItem("voomVideo");if(!z)return;const v=JSON.parse(z);const d=document.createElement("div");d.className="card";const h=document.createElement("h3");h.textContent=v.title;const p=document.createElement("p");p.textContent=v.desc;d.append(h,p);document.querySelector("main").prepend(d)})</script>
+<script>document.addEventListener("DOMContentLoaded",function(){const z=localStorage.getItem("voomVideo");if(!z)return;const v=JSON.parse(z);const d=document.createElement("div");d.className="card";const img=document.createElement("img");img.src=v.thumb;img.style.width="100%";img.style.aspectRatio="16/9";img.style.objectFit="cover";img.style.borderRadius="12px";const h=document.createElement("h3");h.textContent=v.title;const p=document.createElement("p");p.textContent=v.desc;d.append(img,h,p);document.querySelector("main").prepend(d)})</script>
 
 <div class="grid">
 
