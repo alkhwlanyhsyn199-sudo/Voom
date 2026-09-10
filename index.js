@@ -53,7 +53,7 @@ main{padding-bottom:85px}
 
 <header>
 <div class="logo">Voom</div>
-<div class="search" onclick="searchVoom()">⌕</div><div class="search" onclick="alert("لا توجد إشعارات جديدة 🔔")">🔔</div>
+<div class="search" onclick="searchVoom()">⌕</div><div class="search" onclick="alert('لا توجد إشعارات جديدة 🔔')">🔔</div>
 </header>
 
 <main>
@@ -75,7 +75,7 @@ main{padding-bottom:85px}
 <div class="section">Shorts</div>
 
 <div class="shorts">
-<div class="short" onclick="alert("فتح Shorts 🎬")">🎮</div>
+<div class="short" onclick="alert('فتح Shorts 🎬')">🎮</div>
 <div class="short">🔥</div>
 <div class="short">😂</div>
 </div>
